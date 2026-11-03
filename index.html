@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Hipoteca UVA</title>
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.top-2{top:.5rem}.z-10{z-index:10}.z-20{z-index:20}.col-span-2{grid-column:span 2/span 2}.m-1{margin:.25rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:.25rem}.mr-1{margin-right:.25rem}.mt-10{margin-top:2.5rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-64{height:16rem}.h-72{height:18rem}.max-h-\[70vh\]{max-height:70vh}.\!w-auto{width:auto!important}.w-full{width:100%}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.cursor-pointer{cursor:pointer}.resize{resize:both}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-x-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.gap-y-1{row-gap:.25rem}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.overflow-auto{overflow:auto}.\!whitespace-normal{white-space:normal!important}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-50\/60{background-color:rgba(236,253,245,.6)}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.bg-sky-50{--tw-bg-opacity:1;background-color:rgb(240 249 255/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.\!px-2{padding-left:.5rem!important;padding-right:.5rem!important}.\!py-1{padding-top:.25rem!important;padding-bottom:.25rem!important}.\!py-2{padding-top:.5rem!important;padding-bottom:.5rem!important}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pt-5{padding-top:1.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.\!font-medium{font-weight:500!important}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.\!text-rose-700{--tw-text-opacity:1!important;color:rgb(190 18 60/var(--tw-text-opacity,1))!important}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70/var(--tw-text-opacity,1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72/var(--tw-text-opacity,1))}.text-rose-800{--tw-text-opacity:1;color:rgb(159 18 57/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-teal-300{--tw-text-opacity:1;color:rgb(94 234 212/var(--tw-text-opacity,1))}.text-teal-700{--tw-text-opacity:1;color:rgb(15 118 110/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.invert{--tw-invert:invert(100%)}.filter,.invert{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.hover\:bg-teal-400:hover{--tw-bg-opacity:1;background-color:rgb(45 212 191/var(--tw-bg-opacity,1))}.hover\:text-rose-600:hover{--tw-text-opacity:1;color:rgb(225 29 72/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:col-span-2{grid-column:span 2/span 2}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:768px){.md\:col-span-2{grid-column:span 2/span 2}.md\:col-span-3{grid-column:span 3/span 3}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.md\:p-8{padding:2rem}.md\:py-10{padding-top:2.5rem;padding-bottom:2.5rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width:1024px){.lg\:col-span-2{grid-column:span 2/span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f3ee; --surface:#ffffff; --ink:#14213d; --ink-2:#3d4a63; --muted:#7a8499; --line:#e7e3da;
+    --accent:#0f766e; --accent-2:#14b8a6; --accent-soft:#e6f4f1; --warn:#b45309; --warn-soft:#fdf3e3; --bad:#be123c;
+  }
+  html{color-scheme:light}
+  body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .serif{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* Cards */
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:0 1px 2px rgba(20,33,61,.03),0 8px 24px -16px rgba(20,33,61,.12)}
+  .card-h{font-weight:800;font-size:1.02rem;color:var(--ink)}
+  .card-sub{font-size:.82rem;color:var(--muted);margin-top:.15rem}
+  .step{display:inline-flex;align-items:center;justify-content:center;width:1.6rem;height:1.6rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:.8rem;margin-right:.5rem}
+
+  /* Form */
+  .lbl{display:block;font-size:.72rem;font-weight:700;color:var(--ink-2);letter-spacing:.02em;margin-bottom:.35rem}
+  .hint{font-size:.72rem;color:var(--muted);margin-top:.3rem;line-height:1.35}
+  .inp{width:100%;border:1px solid var(--line);border-radius:12px;padding:.62rem .8rem;background:#fbfaf7;font-variant-numeric:tabular-nums;font-size:.92rem;color:var(--ink);outline:none;transition:.15s}
+  .inp:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(15,118,110,.12)}
+  .unit{position:relative}
+  .unit .inp{padding-right:3.2rem}
+  .unit span{position:absolute;right:.8rem;top:50%;transform:translateY(-50%);font-size:.75rem;font-weight:700;color:var(--muted);pointer-events:none}
+  .chk{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem;color:var(--ink-2);padding:.7rem .8rem;border-radius:12px;background:#fbfaf7;border:1px solid var(--line);cursor:pointer}
+  .chk input{width:1rem;height:1rem;margin-top:.12rem;accent-color:var(--accent)}
+
+  /* Buttons */
+  .btn{border-radius:12px;padding:.62rem 1rem;font-weight:700;font-size:.86rem;transition:.15s;white-space:nowrap}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btn-pri{background:var(--accent);color:#fff}.btn-pri:hover{background:#0b5f58}
+  .btn-sec{background:#fff;border:1px solid var(--line);color:var(--ink-2)}.btn-sec:hover{border-color:#cfc9bc;background:#fbfaf7}
+  .btn-amb{background:var(--ink);color:#fff}.btn-amb:hover{background:#0b1426}
+  .btn-ghost{color:var(--muted);font-weight:700;font-size:.8rem}.btn-ghost:hover{color:var(--ink)}
+
+  /* Tabs */
+  .tabs{display:flex;gap:.25rem;padding:.3rem;background:#ebe7de;border-radius:16px;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:1 0 auto;padding:.6rem 1rem;border-radius:12px;font-weight:700;font-size:.86rem;color:var(--ink-2);transition:.15s;white-space:nowrap}
+  .tab:hover{color:var(--ink)}
+  .tab.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(20,33,61,.12)}
+  .panel{display:none}.panel.on{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+  /* Hero */
+  .hero{background:radial-gradient(120% 140% at 100% 0%,#1d3b5c 0%,#14213d 55%,#0e182c 100%);color:#fff;border-radius:24px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:999px;background:radial-gradient(circle,rgba(20,184,166,.35),transparent 70%)}
+  .hero .lbl-h{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9fb3cf}
+  .bar{height:10px;border-radius:999px;background:rgba(255,255,255,.12);position:relative;overflow:hidden}
+  .bar>#k_cancBar{height:100%;border-radius:999px;background:linear-gradient(90deg,#14b8a6,#5eead4)}
+  .bar>#k_umbralMark{position:absolute;top:-2px;bottom:-2px;width:2px;background:#fbbf24}
+
+  .stat .k{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+  .stat .v{font-size:1.45rem;font-weight:800;margin-top:.2rem;letter-spacing:-.01em}
+  .stat .s{font-size:.78rem;color:var(--muted);margin-top:.2rem;line-height:1.35}
+
+  .kv{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px dashed var(--line);font-size:.88rem}
+  .kv:last-child{border-bottom:0}
+  .kv>span:first-child{color:var(--muted);white-space:nowrap}
+  .kv>*:last-child{text-align:right;font-weight:700}
+
+  /* Recommendation list */
+  #rec_list li{padding:.8rem .9rem;border-radius:14px;background:#fbfaf7;border:1px solid var(--line);line-height:1.45}
+  #rec_list li>span:first-child{font-size:1.05rem}
+
+  /* Table */
+  th{position:sticky;top:0;z-index:1}
+  .tbl td,.tbl th{padding:.6rem .75rem;white-space:nowrap}
+  .tbl thead th{font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:#faf8f4!important;border-bottom:1px solid var(--line)}
+  .tbl tbody tr:hover{background:#faf8f4}
+  .tbl tbody td{border-color:#f0ede6!important}
+  #ad_res .lbl{text-transform:uppercase;font-size:.66rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="max-w-6xl mx-auto px-4 py-6 md:py-10">
+
+  <!-- Encabezado -->
+  <header class="flex flex-wrap items-end justify-between gap-4 mb-6">
+    <div>
+      <div class="text-xs font-bold tracking-widest uppercase text-teal-700 mb-1">Crédito hipotecario UVA</div>
+      <h1 class="serif text-3xl md:text-4xl font-bold">Mi hipoteca</h1>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <span id="saveStatus" class="text-xs text-slate-500 mr-1"></span>
+      <button class="btn btn-sec" onclick="exportar()">Exportar respaldo</button>
+      <label class="btn btn-sec cursor-pointer">Importar<input type="file" accept=".json,application/json" class="hidden" onchange="importar(event)"></label>
+    </div>
+  </header>
+  <div id="storageWarn" class="hidden mb-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm">Este navegador no permite guardar datos. Usá <b>Exportar respaldo</b> después de cada cambio.</div>
+
+  <!-- Pestañas -->
+  <nav class="tabs mb-6 sticky top-2 z-20 shadow-sm" role="tablist">
+    <button class="tab" data-tab="resumen">Resumen</button>
+    <button class="tab" data-tab="registrar">Registrar pagos</button>
+    <button class="tab" data-tab="adelantar">¿Adelantar?</button>
+    <button class="tab" data-tab="cuadro">Cuadro de marcha</button>
+    <button class="tab" data-tab="config">Configuración</button>
+  </nav>
+
+  <!-- ============ RESUMEN ============ -->
+  <section class="panel" id="tab-resumen">
+    <div class="hero p-6 md:p-8 mb-5">
+      <div class="relative z-10 grid md:grid-cols-5 gap-6 items-end">
+        <div class="md:col-span-3">
+          <div class="lbl-h">Próxima cuota</div>
+          <div id="k_next" class="serif text-5xl md:text-6xl font-bold num mt-2"></div>
+          <div id="k_nextSub" class="text-sm text-slate-300 mt-2 num"></div>
+          <button class="mt-5 btn bg-teal-500 hover:bg-teal-400 text-slate-900" onclick="goTab('registrar')">Registrar pago →</button>
+        </div>
+        <div class="md:col-span-2">
+          <div class="flex justify-between text-xs text-slate-300 mb-2"><span class="font-bold uppercase tracking-wider">Capital cancelado</span><span id="k_cancTxt" class="num"></span></div>
+          <div class="bar"><div id="k_cancBar"></div><div id="k_umbralMark"></div></div>
+          <div id="k_cancSub" class="text-xs text-slate-300 mt-3 leading-relaxed"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-4 mb-5">
+      <div class="card stat p-5"><div class="k">Saldo de deuda</div><div id="k_saldo" class="v num"></div><div id="k_saldoSub" class="s num"></div></div>
+      <div class="card stat p-5"><div class="k">Cuotas</div><div id="k_avance" class="v num"></div><div id="k_avanceSub" class="s num"></div></div>
+      <div class="card stat p-5"><div class="k">Adelantos</div><div id="k_adel" class="v num"></div><div id="k_adelSub" class="s num"></div></div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-5">
+      <div class="card p-5 lg:col-span-2">
+        <div class="card-h">Cómo evoluciona tu cuota en pesos</div>
+        <div class="card-sub">Proyectada con la inflación mensual que cargaste; se corrige con cada UVA real que registrás.</div>
+        <div class="h-72 mt-4"><canvas id="chartCuota"></canvas></div>
+      </div>
+      <div class="card p-5">
+        <div class="card-h">Ficha del préstamo</div>
+        <div class="card-sub mb-2">Tal como figura en el cuadro del banco.</div>
+        <div class="kv"><span>Monto</span><b id="d_montoARS" class="num"></b></div>
+        <div class="kv"><span>Equivale a</span><span id="d_montoAlt" class="num !font-medium text-sm"></span></div>
+        <div class="kv"><span>Cuota pura</span><span class="num"><span id="d_cuotaUVA"></span> UVAs</span></div>
+        <div class="kv"><span>1ª cuota (UVA inicial)</span><span id="d_cuota1" class="num !font-medium text-sm"></span></div>
+        <div class="kv"><span>TEM · TEA · CFT</span><span id="d_tasas" class="num"></span></div>
+        <div class="kv"><span>Cuota / ingreso</span><span id="d_rci" class="num"></span></div>
+        <button class="btn-ghost mt-3" onclick="goTab('config')">Editar condiciones →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REGISTRAR ============ -->
+  <section class="panel" id="tab-registrar">
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="card p-6">
+        <div class="flex items-center"><span class="step">1</span><span class="card-h">Pagué una cuota</span></div>
+        <p id="pg_titulo" class="card-sub mt-2 mb-5"></p>
+        <div class="grid grid-cols-2 gap-4">
+          <div><label class="lbl">Fecha de pago</label><input id="pg_fecha" type="date" class="inp"></div>
+          <div><label class="lbl">Valor UVA del día</label><input id="pg_uva" type="number" step="any" class="inp"></div>
+          <div class="col-span-2"><label class="lbl">Monto pagado</label><div class="unit"><input id="pg_monto" type="number" step="any" class="inp"><span>ARS</span></div>
+            <p class="hint">Se completa solo al cargar la UVA (cuota + seguro). Corregilo si el resumen del banco dice otro importe.</p></div>
+        </div>
+        <div class="flex gap-2 mt-6">
+          <button id="pg_btn" class="btn btn-pri flex-1" onclick="registrarPago()">Registrar pago</button>
+          <button class="btn btn-sec" onclick="deshacerPago()">Deshacer último</button>
+        </div>
+      </div>
+
+      <div class="card p-6">
+        <div class="flex items-center"><span class="step">2</span><span class="card-h">Quiero adelantar capital</span></div>
+        <p class="card-sub mt-2 mb-5">Se aplica después de la última cuota pagada y cancela desde la <b>última cuota hacia adelante</b>.</p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2"><label class="lbl">Capital a adelantar</label><div class="unit"><input id="ad_monto" type="number" step="any" class="inp"><span>ARS</span></div></div>
+          <div><label class="lbl">Valor UVA del día</label><input id="ad_uva" type="number" step="any" class="inp"></div>
+          <div><label class="lbl">Fecha</label><input id="ad_fecha" type="date" class="inp"></div>
+        </div>
+        <div class="flex gap-2 mt-6">
+          <button class="btn btn-sec flex-1" onclick="simularAdelanto()">Ver impacto</button>
+          <button class="btn btn-amb flex-1" onclick="confirmarAdelanto()">Confirmar adelanto</button>
+        </div>
+        <div class="mt-5 pt-5 border-t border-dashed" style="border-color:var(--line)">
+          <label class="lbl">Atajo: ¿cuánto necesito para cancelar N cuotas?</label>
+          <div class="flex gap-2">
+            <input id="ad_n" type="number" step="1" min="1" class="inp" placeholder="Ej. 12">
+            <button class="btn btn-sec" onclick="calcN()">Calcular</button>
+            <button class="btn btn-sec" onclick="cancelTotal()">Saldo total</button>
+          </div>
+          <div id="ad_n_res" class="text-sm mt-3 text-slate-600"></div>
+        </div>
+      </div>
+    </div>
+    <div id="ad_res" class="hidden card p-6 mt-5" style="border-color:#e8d9bd;background:#fffdf8"></div>
+  </section>
+
+  <!-- ============ ADELANTAR ============ -->
+  <section class="panel" id="tab-adelantar">
+    <div class="card p-6 mb-5">
+      <div class="flex flex-wrap items-start justify-between gap-3 mb-5">
+        <div>
+          <div class="card-h text-lg">¿Me conviene adelantar cuotas?</div>
+          <div class="card-sub">Compara lo que te ahorra adelantar (neto de comisión) contra lo que rendiría esa plata invertida.</div>
+        </div>
+        <div id="rec_badge"></div>
+      </div>
+      <ul id="rec_list" class="grid md:grid-cols-2 gap-3 text-sm"></ul>
+    </div>
+    <div class="card p-6">
+      <div class="card-h">Rendimiento de adelantar según el momento</div>
+      <div class="card-sub">Rendimiento real anual (sobre inflación) de adelantar después de cada cuota. Si la línea verde está por encima de la roja, conviene adelantar.</div>
+      <div class="h-64 mt-4"><canvas id="chartRec"></canvas></div>
+    </div>
+  </section>
+
+  <!-- ============ CUADRO ============ -->
+  <section class="panel" id="tab-cuadro">
+    <div class="card p-5">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+        <div>
+          <div class="card-h">Cuadro de marcha</div>
+          <div class="card-sub">● UVA real registrada · el resto es proyección. Los saldos en pesos están valuados a la UVA de cada mes.</div>
+        </div>
+        <div class="flex gap-2">
+          <select id="tblFiltro" class="inp !w-auto !py-2" onchange="renderTabla()">
+            <option value="todas">Todas las cuotas</option>
+            <option value="pend">Pendientes</option>
+            <option value="pag">Pagadas y adelantos</option>
+          </select>
+          <button class="btn btn-sec" onclick="irActual()">Ir a la actual</button>
+        </div>
+      </div>
+      <div id="tblWrap" class="overflow-auto max-h-[70vh] rounded-xl border" style="border-color:var(--line)">
+        <table class="tbl w-full text-sm num">
+          <thead><tr id="tblHead"></tr></thead>
+          <tbody id="tblBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONFIGURACIÓN ============ -->
+  <section class="panel" id="tab-config">
+    <p id="d_lockWarn" class="hidden mb-5 text-sm p-4 rounded-xl" style="background:var(--warn-soft);color:var(--warn)"></p>
+    <div class="grid lg:grid-cols-3 gap-5 items-start">
+      <div class="card p-6 lg:col-span-2">
+        <div class="card-h mb-5">Condiciones del préstamo</div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2"><label class="lbl">Monto del préstamo definido por</label>
+            <select id="p_modoMonto" class="inp"><option value="ars">Monto exacto en pesos (como figura en el banco)</option><option value="pct">% del valor de la propiedad</option></select></div>
+          <div id="w_montoARS"><label class="lbl">Monto del préstamo</label><div class="unit"><input id="p_montoARS" type="number" step="any" class="inp"><span>ARS</span></div></div>
+          <div id="w_pct"><label class="lbl">% a financiar</label><div class="unit"><input id="p_pct" type="number" step="any" class="inp"><span>%</span></div></div>
+          <div><label class="lbl">Valor de la propiedad</label><div class="unit"><input id="p_valorUSD" type="number" step="any" class="inp"><span>USD</span></div></div>
+          <div><label class="lbl">Tipo de cambio</label><div class="unit"><input id="p_tc" type="number" step="any" class="inp"><span>$/USD</span></div></div>
+          <div><label class="lbl">TNA del banco (sobre UVA)</label><div class="unit"><input id="p_tna" type="number" step="any" class="inp"><span>%</span></div></div>
+          <div><label class="lbl">Plazo</label><div class="unit"><input id="p_anios" type="number" step="1" class="inp"><span>años</span></div></div>
+          <div><label class="lbl">Valor UVA al otorgamiento</label><div class="unit"><input id="p_uva0" type="number" step="any" class="inp"><span>$</span></div><p class="hint">El de la fecha de escritura/desembolso.</p></div>
+          <div><label class="lbl">Vencimiento de la 1ª cuota</label><input id="p_fecha1" type="date" class="inp"></div>
+          <div><label class="lbl">Inflación mensual proyectada</label><div class="unit"><input id="p_inf" type="number" step="any" class="inp"><span>%</span></div><p class="hint">Solo afecta la proyección en pesos.</p></div>
+          <div><label class="lbl">Ingreso neto mensual</label><div class="unit"><input id="p_ingreso" type="number" step="any" class="inp"><span>ARS</span></div></div>
+          <label class="chk sm:col-span-2"><input id="p_iva" type="checkbox"><span><b>Segunda vivienda:</b> suma 21% de IVA sobre los intereses.</span></label>
+        </div>
+      </div>
+
+      <div class="space-y-5">
+        <div class="card p-6">
+          <div class="card-h mb-5">Seguro de incendio</div>
+          <div class="grid grid-cols-2 gap-4">
+            <div><label class="lbl">Superficie</label><div class="unit"><input id="p_m2" type="number" step="any" class="inp"><span>m²</span></div></div>
+            <div><label class="lbl">Tasa mensual</label><div class="unit"><input id="p_tasaSeg" type="number" step="any" class="inp"><span>%</span></div></div>
+            <div class="col-span-2"><label class="lbl">Valor de reposición por m²</label><div class="unit"><input id="p_valorM2" type="number" step="any" class="inp"><span>ARS</span></div></div>
+          </div>
+          <div class="flex justify-between items-center mt-4 p-3 rounded-xl" style="background:var(--accent-soft)">
+            <span class="text-sm font-semibold" style="color:var(--accent)">Prima mensual</span><b id="d_seguro" class="num" style="color:var(--accent)"></b>
+          </div>
+          <label class="chk mt-3"><input id="p_ajSeguro" type="checkbox"><span>Ajustarlo por inflación (el banco lo deja fijo en pesos).</span></label>
+        </div>
+
+        <div class="card p-6">
+          <div class="card-h mb-5">Adelantos</div>
+          <div class="grid grid-cols-2 gap-4">
+            <div><label class="lbl">Comisión</label><div class="unit"><input id="p_comPct" type="number" step="any" class="inp"><span>%</span></div></div>
+            <div><label class="lbl">Sin comisión desde</label><div class="unit"><input id="p_umbralPct" type="number" step="any" class="inp"><span>%</span></div></div>
+            <div class="col-span-2"><label class="lbl">Rendimiento real de tu alternativa</label><div class="unit"><input id="p_altReal" type="number" step="any" class="inp"><span>% anual</span></div><p class="hint">Lo que le ganarías a la inflación invirtiendo esa plata (bonos CER, plazo fijo UVA…).</p></div>
+          </div>
+          <label class="chk mt-4"><input id="p_cuentaOrd" type="checkbox"><span>Para el umbral cuenta <b>todo</b> el capital cancelado (cuotas + adelantos).</span></label>
+        </div>
+
+        <button class="btn btn-ghost !text-rose-700" onclick="reiniciar()">Borrar todo y empezar de cero</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-xs text-center mt-10" style="color:var(--muted)">Herramienta de seguimiento personal · no es asesoramiento financiero · validá siempre contra el resumen del banco.</footer>
+</div>
+
+<script>
+// ================= ENGINE START =================
+function addMonths(s, k){
+  const [y,m,d] = s.split('-').map(Number);
+  const dt = new Date(y, m-1+k, 1);
+  const last = new Date(dt.getFullYear(), dt.getMonth()+1, 0).getDate();
+  dt.setDate(Math.min(d, last));
+  return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
+}
+
+// Simula el préstamo completo a partir de parámetros + eventos (pagos reales y adelantos).
+// extra: adelanto hipotético {despuesDe, montoARS|capUVA, uva}
+function simulate(p, ev, extra){
+  const P_ARS = (p.modoMonto === 'ars' && p.montoARS > 0) ? p.montoARS : p.valorUSD * p.pct/100 * p.tc;
+  const Pn = p.uva0 > 0 ? P_ARS / p.uva0 : 0;
+  const n = Math.max(1, Math.round(p.anios*12));
+  const i = p.tna/100/365*30.41667;               // misma TEM que usa el banco
+  const segBase = (p.m2||0) * (p.valorM2||0) * (p.tasaSeg||0)/100;  // seguro de incendio mensual (ARS)
+  const ivaRate = p.iva ? 0.21 : 0;
+  const C = i > 0 ? Pn*i/(1-Math.pow(1+i,-n)) : Pn/n;
+  // Cronograma de amortización de capital (sistema francés): amort_k = C·(1+i)^-(n-k+1)
+  const am = [];
+  for (let k=1;k<=n;k++) am.push(i>0 ? C*Math.pow(1+i,-(n-k+1)) : Pn/n);
+
+  const known = {0: p.uva0};
+  for (const [m,pg] of Object.entries(ev.pagos||{})) if (pg && pg.uva>0) known[+m] = pg.uva;
+  const kk = Object.keys(known).map(Number).sort((a,b)=>a-b);
+  const infM = p.inf/100;
+  const uvaFor = m => {
+    if (known[m] != null) return {v: known[m], real: m>0};
+    let b = 0; for (const k of kk){ if (k<=m) b=k; else break; }
+    return {v: known[b]*Math.pow(1+infM, m-b), real:false};
+  };
+
+  const adel = (ev.adelantos||[]).map(a=>({...a}));
+  if (extra) adel.push({...extra, _extra:true});
+  adel.sort((a,b)=>a.despuesDe-b.despuesDe);
+
+  const umbral = p.umbralPct/100 * Pn;
+  let saldo = Pn, idx = 0, prepaid = 0, ai = 0, m = 1, extraInfo = null;
+  const rows = [], cuotas = [];
+  while (ai<adel.length && adel[ai].despuesDe<0) ai++;
+
+  for (let guard=0; guard<3000; guard++){
+    // Adelantos aplicados después de la cuota m-1
+    while (ai<adel.length && adel[ai].despuesDe === m-1){
+      const a = adel[ai++];
+      if (saldo <= 1e-9) continue;
+      const uA = a.uva>0 ? a.uva : uvaFor(m-1).v;
+      let X = a.capUVA>0 ? a.capUVA : (a.montoARS||0)/uA;
+      X = Math.min(X, saldo);
+      if (!(X>0)) continue;
+      const canc = p.cuentaOrd ? (Pn - saldo) : prepaid;
+      const suj = Math.max(0, Math.min(X, umbral - canc));
+      const fee = suj * p.comPct/100;
+      // Cancelar capital desde la última cuota hacia adelante
+      let rem = X, elim = 0;
+      while (rem > 1e-12 && am.length > idx){
+        const L = am[am.length-1];
+        if (L <= rem + 1e-12){ rem -= L; am.pop(); elim++; }
+        else { elim += rem/L; am[am.length-1] = L-rem; rem = 0; }
+      }
+      saldo -= X; if (saldo < 1e-9) saldo = 0;
+      prepaid += X;
+      const r = {tipo:'adelanto', id:a.id, despuesDe:a.despuesDe, fecha:a.fecha, uva:uA,
+        capUVA:X, capARS:X*uA, feeUVA:fee, feeARS:fee*uA, sujUVA:suj, elim,
+        saldoUVA:saldo, saldoARS:saldo*uA, extra:!!a._extra, cancPrev:canc};
+      rows.push(r);
+      if (a._extra) extraInfo = r;
+    }
+    if (idx >= am.length || saldo <= 1e-9) break;
+
+    const u = uvaFor(m);
+    const interes = saldo*i;
+    let amort = am[idx++];
+    if (idx >= am.length) amort = saldo;          // limpia residuos en la última cuota
+    amort = Math.min(amort, saldo);
+    const iva = interes*ivaRate;
+    const cuotaUVA = interes + amort + iva;
+    saldo -= amort; if (saldo < 1e-7) saldo = 0;
+    const pg = (ev.pagos||{})[m];
+    const segARS = p.ajSeguro && p.uva0 > 0 ? segBase * u.v / p.uva0 : segBase;
+    const row = {tipo:'cuota', m, fecha:addMonths(p.fecha1, m-1), uva:u.v, real:u.real,
+      interes, amort, iva, cuotaUVA, cuotaARS:cuotaUVA*u.v, segARS, segUVA:segARS/u.v,
+      totalARS:cuotaUVA*u.v + segARS, saldoUVA:saldo, saldoARS:saldo*u.v,
+      pagado:!!pg, pago:pg||null};
+    rows.push(row); cuotas.push(row);
+    m++;
+  }
+  return {Pn, P_ARS, C, i, n, ivaRate, umbral, segBase, rows, cuotas, extraInfo, uvaFor};
+}
+
+function stateAt(sim, k){
+  let saldo = sim.Pn, prepaid = 0, fees = 0, feesARS = 0, capARS = 0, elim = 0;
+  for (const r of sim.rows){
+    if (r.tipo === 'cuota'){ if (r.m > k) break; saldo = r.saldoUVA; }
+    else { if (r.despuesDe > k) break; saldo = r.saldoUVA; prepaid += r.capUVA; fees += r.feeUVA; feesARS += r.feeARS; capARS += r.capARS; elim += r.elim; }
+  }
+  return {saldo, prepaid, fees, feesARS, capARS, elim};
+}
+
+function irr(fl){
+  const npv = r => { let s=0, d=1; for (let t=0;t<fl.length;t++){ s += fl[t]/d; d *= 1+r; } return s; };
+  let lo=-0.02, hi=0.06, a=npv(lo), b=npv(hi);
+  if (!isFinite(a) || !isFinite(b) || a*b > 0) return null;
+  for (let it=0; it<100; it++){ const mid=(lo+hi)/2, v=npv(mid); if (v*a>0){lo=mid;a=v;} else hi=mid; }
+  return (lo+hi)/2;
+}
+
+// Compara el préstamo con y sin un adelanto hipotético en la posición extra.despuesDe
+function prepayAnalysis(p, ev, base, extra){
+  const ext = simulate(p, ev, extra);
+  const info = ext.extraInfo; if (!info) return null;
+  const k = extra.despuesDe;
+  const bm = new Map(base.cuotas.map(r=>[r.m,r])), em = new Map(ext.cuotas.map(r=>[r.m,r]));
+  const lastB = base.cuotas.length ? base.cuotas[base.cuotas.length-1].m : 0;
+  const fl = [-(info.capUVA + info.feeUVA)];
+  let intB=0, intE=0, nomB=0, nomE=0;
+  for (let m=k+1; m<=lastB; m++){
+    const b=bm.get(m), e=em.get(m);
+    // incluye el seguro: al acortar el plazo también se dejan de pagar esas primas
+    fl.push((b?b.cuotaUVA+b.segUVA:0) - (e?e.cuotaUVA+e.segUVA:0));
+    if (b){ intB += b.interes+b.iva; nomB += b.totalARS; }
+    if (e){ intE += e.interes+e.iva; nomE += e.totalARS; }
+  }
+  const r = irr(fl);
+  return {ext, info, irrM:r, tea: r==null?null:Math.pow(1+r,12)-1,
+    intSavedUVA:intB-intE, nomSaved:(nomB-nomE) - info.feeARS - info.capARS,
+    lastB: base.cuotas[base.cuotas.length-1], lastE: ext.cuotas[ext.cuotas.length-1],
+    nextB: bm.get(k+1), nextE: em.get(k+1),
+    remB: base.cuotas.filter(r=>r.m>k).length, remE: ext.cuotas.filter(r=>r.m>k).length};
+}
+// ================= ENGINE END =================
+
+// ---------- Estado y persistencia ----------
+const KEY = 'simuladorHipotecaUVA_v1';
+const VERSION = 2;
+// Valores por defecto = cuadro de marcha del banco (22/10/2026)
+const DEF = {valorUSD:287058, modoMonto:'ars', montoARS:298000000, pct:66.55, tna:6.9, anios:20, tc:1560, uva0:2163.03, inf:2, fecha1:'2026-12-01',
+  iva:false, m2:135, valorM2:2588000, tasaSeg:0.00605, ajSeguro:false,
+  comPct:3, umbralPct:25, cuentaOrd:true, altReal:3, ingreso:9300000};
+const FIELDS = Object.keys(DEF);
+let PR = {...DEF};
+let EV = {pagos:{}, adelantos:[]};
+let storageOK = true;
+let chartCuota = null, chartRec = null, formM = null, lastSim = null;
+
+const $ = id => document.getElementById(id);
+const nf0 = new Intl.NumberFormat('es-AR',{maximumFractionDigits:0});
+const nf2 = new Intl.NumberFormat('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const ars = v => '$ ' + nf0.format(Math.round(v||0));
+const usd = v => 'US$ ' + nf0.format(Math.round(v||0));
+const uv  = v => nf2.format(v||0);
+const pct = (v,d=2) => new Intl.NumberFormat('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d}).format(v) + '%';
+const fdate = s => { if(!s) return ''; const [y,m,d]=s.split('-'); return `${d}/${m}/${y}`; };
+const today = () => { const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
+const compact = v => { const a=Math.abs(v); if(a>=1e9) return '$'+nf2.format(v/1e9)+'MM'; if(a>=1e6) return '$'+nf2.format(v/1e6)+'M'; if(a>=1e3) return '$'+nf0.format(v/1e3)+'k'; return '$'+nf0.format(v); };
+
+function load(){
+  try{
+    const raw = localStorage.getItem(KEY);
+    if (raw){
+      const d = JSON.parse(raw);
+      EV = {pagos:d.ev?.pagos||{}, adelantos:d.ev?.adelantos||[]};
+      const vacio = !Object.keys(EV.pagos).length && !EV.adelantos.length;
+      // Versión anterior sin pagos cargados: tomar las condiciones reales del banco
+      PR = ((d.version||1) < VERSION && vacio) ? {...DEF} : {...DEF, ...(d.params||{})};
+    }
+  }catch(e){ storageOK = false; }
+}
+function save(){
+  try{
+    localStorage.setItem(KEY, JSON.stringify({version:VERSION, savedAt:new Date().toISOString(), params:PR, ev:EV}));
+    const t = new Date(); $('saveStatus').textContent = `Guardado ✓ ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`;
+  }catch(e){ storageOK = false; $('storageWarn').classList.remove('hidden'); }
+}
+function writeParams(){
+  FIELDS.forEach(f=>{ const el=$('p_'+f); if(!el) return; if(el.type==='checkbox') el.checked=!!PR[f]; else el.value = PR[f] ?? ''; });
+}
+function readParams(){
+  const p = {};
+  FIELDS.forEach(f=>{ const el=$('p_'+f); if(el.type==='checkbox') p[f]=el.checked; else if(el.tagName==='SELECT') p[f]=el.value; else if(el.type==='date') p[f]=el.value||DEF[f]; else { const v=parseFloat(el.value); p[f]=isFinite(v)?v:0; } });
+  return p;
+}
+function paidCount(){ let k=0; while (EV.pagos[k+1]) k++; return k; }
+
+// ---------- Render principal ----------
+function render(){
+  PR = readParams();
+  const base = simulate(PR, EV, null);
+  lastSim = base;
+  const noAdel = simulate(PR, {pagos:EV.pagos, adelantos:[]}, null);
+  const paid = paidCount();
+  const st = stateAt(base, paid);
+  const next = base.cuotas.find(r=>r.m===paid+1);
+  const last = base.cuotas[base.cuotas.length-1];
+  const uvaPos = base.uvaFor(paid).v;
+  const restantes = base.cuotas.filter(r=>r.m>paid).length;
+
+  // Parámetros derivados
+  const porArs = PR.modoMonto === 'ars';
+  $('w_montoARS').classList.toggle('hidden', !porArs);
+  $('w_pct').classList.toggle('hidden', porArs);
+  const valorProp = PR.valorUSD*PR.tc;
+  const ltv = valorProp ? base.P_ARS/valorProp*100 : 0;
+  $('d_montoARS').textContent = ars(base.P_ARS);
+  $('d_montoAlt').textContent = `${usd(base.P_ARS/(PR.tc||1))} · ${uv(base.Pn)} UVAs · ${pct(ltv,1)} de la propiedad`;
+  $('d_cuotaUVA').textContent = uv(base.C) + (PR.iva ? ' + IVA' : '');
+  $('d_seguro').textContent = ars(base.segBase);
+  const c1 = base.C*PR.uva0 + base.segBase;
+  $('d_cuota1').textContent = `${ars(c1)} (${ars(base.C*PR.uva0)} + seguro ${ars(base.segBase)})`;
+  const tem = base.i*(1+base.ivaRate);
+  const cftM = irr([-base.P_ARS, ...noAdel.cuotas.map(r=>r.cuotaUVA*PR.uva0 + base.segBase)]);
+  const anual = r => Math.pow(1+r, 365/30.41667)-1;
+  $('d_tasas').textContent = `${pct(tem*100,3)} · ${pct(anual(tem)*100)} · ${cftM!=null?pct(anual(cftM)*100):'—'}`;
+  $('d_rci').textContent = PR.ingreso>0 ? pct(c1/PR.ingreso*100) : 'cargá tu ingreso';
+  $('d_rci').className = 'num ' + (PR.ingreso>0 && c1/PR.ingreso>0.25 ? 'text-rose-600 font-semibold' : '');
+  const lw = $('d_lockWarn');
+  if (paid>0 || EV.adelantos.length){ lw.classList.remove('hidden'); lw.textContent = `Tenés ${paid} cuota(s) y ${EV.adelantos.length} adelanto(s) registrados. Cambiar valor, %, TNA, plazo, dólar o UVA inicial recalcula todo el préstamo; la inflación solo afecta la proyección.`; }
+  else lw.classList.add('hidden');
+
+  // KPIs
+  if (next){
+    $('k_next').textContent = ars(next.totalARS);
+    $('k_nextSub').textContent = `Cuota ${next.m} · vence ${fdate(next.fecha)} · ${uv(next.cuotaUVA)} UVAs + seguro ${ars(next.segARS)}`;
+  } else { $('k_next').textContent = '¡Cancelado!'; $('k_nextSub').textContent = 'No quedan cuotas'; }
+  $('k_saldo').textContent = uv(st.saldo) + ' UVAs';
+  $('k_saldoSub').textContent = `${ars(st.saldo*uvaPos)} · ≈ ${usd(st.saldo*uvaPos/(PR.tc||1))} (dólar cargado)`;
+  $('k_avance').textContent = `${paid} / ${paid+restantes}`;
+  $('k_avanceSub').textContent = last ? `Restan ${restantes} cuotas · fin ${fdate(last.fecha)}` : '';
+  $('k_adel').textContent = st.elim ? `−${nf2.format(st.elim)} cuotas` : 'Sin adelantos';
+  const totalPagado = Object.values(EV.pagos).reduce((s,p)=>s+(p.monto||0),0) + st.capARS + st.feesARS;
+  $('k_adelSub').textContent = `Adelantado ${ars(st.capARS)} · comisiones ${ars(st.feesARS)} · pagado total ${ars(totalPagado)}`;
+
+  // Barra capital cancelado / umbral
+  const cancTot = base.Pn - st.saldo;
+  const cancUmbral = PR.cuentaOrd ? cancTot : st.prepaid;
+  const fr = base.Pn ? cancTot/base.Pn : 0;
+  $('k_cancBar').style.width = Math.min(100, fr*100) + '%';
+  $('k_umbralMark').style.left = Math.min(100, PR.umbralPct) + '%';
+  $('k_cancTxt').textContent = `${pct(fr*100,1)} del préstamo · ${uv(cancTot)} UVAs`;
+  const faltan = Math.max(0, base.umbral - cancUmbral);
+  $('k_cancSub').innerHTML = faltan > 1e-6
+    ? `Comisión del ${pct(PR.comPct,1)} activa. Faltan <b>${uv(faltan)} UVAs (${ars(faltan*uvaPos)})</b> ${PR.cuentaOrd?'de capital cancelado':'de adelantos'} para llegar al ${pct(PR.umbralPct,0)} y adelantar sin costo.`
+    : `<span class="text-teal-300 font-semibold">Superaste el ${pct(PR.umbralPct,0)}: los adelantos ya no tienen comisión.</span>`;
+
+  // Formulario de pago
+  if (next){
+    $('pg_titulo').textContent = `Cuota ${next.m} · vence ${fdate(next.fecha)} · ${uv(next.cuotaUVA)} UVAs + seguro (proyectada ${ars(next.totalARS)})`;
+    $('pg_uva').placeholder = 'Proy. ' + uv(next.uva);
+    if (formM !== next.m){ formM = next.m; $('pg_fecha').value = next.fecha; $('pg_uva').value=''; $('pg_monto').value=''; }
+    $('pg_monto').placeholder = nf0.format(Math.round(next.totalARS));
+    $('pg_btn').disabled = false;
+  } else { $('pg_titulo').textContent = 'Préstamo cancelado.'; $('pg_btn').disabled = true; }
+  $('ad_uva').placeholder = 'Últ. ' + uv(uvaPos);
+  if (!$('ad_fecha').value) $('ad_fecha').value = today();
+
+  renderTabla();
+  renderChartCuota(base, noAdel);
+  renderRecomendacion(base, paid, st);
+  save();
+}
+
+// ---------- Tabla ----------
+function renderTabla(){
+  const sim = lastSim; if (!sim) return;
+  const paid = paidCount();
+  const f = $('tblFiltro').value;
+  const iva = PR.iva;
+  $('tblHead').innerHTML = ['Cuota','Vencimiento','Valor UVA','Cuota UVAs','Interés','Capital', ...(iva?['IVA']:[]),'Cuota pura $','Seguro $','Total $','Saldo UVAs','Saldo $','Estado']
+    .map((h,ix)=>`<th class="${ix>1?'text-right':'text-left'} bg-slate-50 font-semibold">${h}</th>`).join('');
+  const cols = iva ? 14 : 13;
+  let html = '';
+  for (const r of sim.rows){
+    if (r.tipo==='cuota'){
+      if (f==='pend' && r.m<=paid) continue;
+      if (f==='pag' && r.m>paid) continue;
+      const isNext = r.m===paid+1;
+      const cls = r.pagado ? 'bg-emerald-50/60' : isNext ? 'bg-sky-50 font-semibold' : '';
+      const estado = r.pagado
+        ? `<span class="text-emerald-700">✓ ${fdate(r.pago.fecha)}</span>${r.m===paid?` <button class="text-xs text-slate-400 hover:text-rose-600 ml-1" onclick="deshacerPago()">deshacer</button>`:''}`
+        : isNext ? `<button class="text-xs btn btn-pri !py-1 !px-2" onclick="goTab('registrar');document.getElementById('pg_uva').focus()">Registrar</button>` : '<span class="text-slate-400">Pendiente</span>';
+      const totalPesos = r.pagado && r.pago.monto ? r.pago.monto : r.totalARS;
+      html += `<tr id="row_${r.m}" class="border-t border-slate-100 ${cls}">
+        <td>${r.m}</td><td>${fdate(r.fecha)}</td>
+        <td class="text-right">${r.real?'<span class="text-emerald-600">●</span> ':''}${uv(r.uva)}</td>
+        <td class="text-right">${uv(r.cuotaUVA)}</td><td class="text-right">${uv(r.interes)}</td><td class="text-right">${uv(r.amort)}</td>
+        ${iva?`<td class="text-right">${uv(r.iva)}</td>`:''}
+        <td class="text-right">${ars(r.cuotaARS)}</td><td class="text-right">${ars(r.segARS)}</td>
+        <td class="text-right font-semibold" ${r.pagado?'title="Monto pagado real"':''}>${ars(totalPesos)}</td>
+        <td class="text-right">${uv(r.saldoUVA)}</td><td class="text-right">${ars(r.saldoARS)}</td>
+        <td class="text-right">${estado}</td></tr>`;
+    } else {
+      if (f==='pend') continue;
+      html += `<tr class="border-t border-amber-200 bg-amber-50"><td colspan="${cols}" class="!whitespace-normal">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span>⚡ <b>Adelanto de capital</b> ${fdate(r.fecha)} · ${uv(r.capUVA)} UVAs (${ars(r.capARS)}) · comisión ${ars(r.feeARS)} · canceló <b>${nf2.format(r.elim)} cuotas</b> · saldo ${uv(r.saldoUVA)} UVAs</span>
+          <button class="text-xs text-slate-500 hover:text-rose-600" onclick="borrarAdelanto(${r.id})">eliminar</button>
+        </div></td></tr>`;
+    }
+  }
+  $('tblBody').innerHTML = html || `<tr><td colspan="${cols}" class="text-center text-slate-400 py-6">Sin filas</td></tr>`;
+}
+function irActual(){
+  $('tblFiltro').value='todas'; renderTabla();
+  const el = $('row_'+(paidCount()+1)) || $('row_'+paidCount());
+  if (el){ const w=$('tblWrap'); w.scrollTop = el.offsetTop - 60; el.scrollIntoView({block:'nearest'}); }
+}
+
+// ---------- Gráfico cuota ----------
+function renderChartCuota(base, noAdel){
+  if (typeof Chart === 'undefined') return;
+  const maxM = Math.max(noAdel.cuotas.length, base.cuotas.length);
+  const labels = Array.from({length:maxM}, (_,k)=>k+1);
+  const bm = new Map(base.cuotas.map(r=>[r.m,r])), nm = new Map(noAdel.cuotas.map(r=>[r.m,r]));
+  const dCon = labels.map(m=>bm.get(m)?.totalARS ?? null);
+  const dSin = labels.map(m=>nm.get(m)?.totalARS ?? null);
+  const dReal = labels.map(m=>EV.pagos[m]?.monto ?? null);
+  const fechas = labels.map(m=>addMonths(PR.fecha1, m-1));
+  const data = {labels, datasets:[
+    {label:'Con tus adelantos', data:dCon, borderColor:'#0f766e', backgroundColor:'rgba(15,118,110,.08)', fill:true, pointRadius:0, borderWidth:2, tension:.15},
+    {label:'Sin adelantos', data:dSin, borderColor:'#94a3b8', borderDash:[5,4], pointRadius:0, borderWidth:1.5, tension:.15},
+    {label:'Pagado real', data:dReal, borderColor:'#14213d', backgroundColor:'#14213d', showLine:false, pointRadius:3}
+  ]};
+  const opts = {responsive:true, maintainAspectRatio:false, animation:false, interaction:{mode:'index', intersect:false},
+    plugins:{legend:{labels:{boxWidth:12, font:{size:11}}}, tooltip:{callbacks:{
+      title: it => `Cuota ${it[0].label} · ${fdate(fechas[it[0].dataIndex])}`,
+      label: it => it.raw==null?null:`${it.dataset.label}: ${ars(it.raw)}`}}},
+    scales:{x:{ticks:{maxTicksLimit:12, font:{size:10}}, title:{display:true, text:'N° de cuota', font:{size:10}}},
+      y:{ticks:{callback:v=>compact(v), font:{size:10}}}}};
+  if (chartCuota){ chartCuota.data = data; chartCuota.options = opts; chartCuota.update('none'); }
+  else chartCuota = new Chart($('chartCuota'), {type:'line', data, options:opts});
+}
+
+// ---------- Recomendación ----------
+function renderRecomendacion(base, paid, st){
+  const list = $('rec_list'), badge = $('rec_badge');
+  if (st.saldo <= 1e-6){ badge.innerHTML=''; list.innerHTML='<li>El préstamo está cancelado. 🎉</li>'; return; }
+  const iEff = base.i*(1+base.ivaRate);
+  const teaPrest = Math.pow(1+iEff,12)-1;
+  const alt = PR.altReal/100;
+  const altM = Math.pow(1+alt,1/12)-1;
+  const uvaPos = base.uvaFor(paid).v;
+  const adM = parseFloat($('ad_monto').value);
+  const adU = parseFloat($('ad_uva').value) > 0 ? parseFloat($('ad_uva').value) : uvaPos;
+  let X = adM > 0 ? adM/adU : base.Pn*0.05;
+  X = Math.min(X, st.saldo);
+
+  const an = prepayAnalysis(PR, EV, base, {despuesDe:paid, capUVA:X, uva:adU});
+  const teaNow = an?.tea;
+  const feeNow = an?.info.feeUVA || 0;
+  const feeFrac = X ? feeNow/X : 0;
+
+  // ¿Cuándo se llega naturalmente al umbral?
+  const cancNow = PR.cuentaOrd ? base.Pn - st.saldo : st.prepaid;
+  let natural = null;
+  if (cancNow < base.umbral && PR.cuentaOrd){
+    natural = base.cuotas.find(r=>r.m>paid && base.Pn - r.saldoUVA >= base.umbral - 1e-9) || null;
+  }
+
+  let verdict, color;
+  const margin = 0.0025;
+  let esperar = false, w = 0, benefitNow = 0;
+  if (natural && feeNow>0){
+    w = natural.m - paid;
+    benefitNow = X*(Math.pow(1+iEff,w) - Math.pow(1+altM,w)) - feeNow;
+    esperar = benefitNow < 0;
+  }
+  if (teaNow == null){ verdict='Sin datos suficientes'; color='bg-slate-100 text-slate-700'; }
+  else if (teaNow > alt + margin){
+    if (esperar){ verdict=`Conviene, pero esperá a la cuota ${natural.m}`; color='bg-amber-100 text-amber-800'; }
+    else { verdict='Conviene adelantar'; color='bg-emerald-100 text-emerald-800'; }
+  } else if (teaNow < alt - margin){ verdict='No conviene: invertí'; color='bg-rose-100 text-rose-800'; }
+  else { verdict='Indiferente'; color='bg-slate-100 text-slate-700'; }
+  badge.innerHTML = `<span class="px-3 py-1.5 rounded-full text-sm font-bold ${color}">${verdict}</span>`;
+
+  const li = (ico, html) => `<li class="flex gap-2"><span>${ico}</span><span>${html}</span></li>`;
+  let h = '';
+  h += li('📌', `Analizando un adelanto de <b>${ars(X*adU)}</b> (${uv(X)} UVAs) hoy, después de la cuota ${paid}${adM>0?'':' — cargá un monto en <b>Registrar pagos → Adelantar capital</b> para analizar el tuyo'}.`);
+  if (teaNow != null) h += li('📈', `Adelantar rinde <b>${pct(teaNow*100)} real anual</b>${feeNow>0?` ya descontada la comisión de ${ars(feeNow*adU)}`:''}. Tu alternativa: <b>${pct(alt*100)}</b>. La tasa del préstamo${PR.iva?' (con IVA)':''} es ${pct(teaPrest*100)} real anual: sin comisión, adelantar rinde exactamente eso.`);
+  if (teaNow != null) h += li('🎯', `Regla: <b>adelantá si tu inversión alternativa rinde menos de ${pct(teaNow*100)} por encima de la inflación</b>; si rinde más, conviene invertir y seguir pagando la cuota.`);
+  if (feeNow>0){
+    const payback = feeFrac/iEff;
+    h += li('💸', `La comisión se recupera con ~<b>${nf0.format(Math.ceil(payback))} meses</b> de intereses ahorrados. Solo paga comisión la parte que queda por debajo del ${pct(PR.umbralPct,0)}: ${uv(an.info.sujUVA)} de ${uv(X)} UVAs.`);
+    if (natural){
+      h += li('⏳', `Pagando normal, llegás al ${pct(PR.umbralPct,0)} en la <b>cuota ${natural.m} (${fdate(natural.fecha)})</b>, en ${w} meses. ${esperar
+        ? `Como tu alternativa rinde ${pct(alt*100)}, te conviene <b>invertir esa plata hasta entonces y adelantar sin comisión</b> (adelantar hoy deja ${ars(-benefitNow*adU)} menos, a valores de hoy).`
+        : `Aun así, adelantar hoy te deja ${ars(benefitNow*adU)} más (a valores de hoy) que esperar.`}`);
+    } else if (!PR.cuentaOrd){
+      const f2 = Math.max(0, base.umbral - st.prepaid);
+      h += li('⏳', `Te faltan ${ars(f2*adU)} de adelantos acumulados para que dejen de cobrar comisión. Si vas a adelantar, hacerlo en montos grandes que crucen ese umbral diluye el costo.`);
+    }
+  } else {
+    h += li('✅', `Sin comisión: cada peso adelantado te ahorra ${pct(teaPrest*100)} real anual, garantizado.`);
+  }
+  h += li('📉', `La inflación proyectada no cambia la conveniencia en términos reales (deuda y cuota ajustan por UVA). Lo que importa es si tus ingresos le ganan o pierden a la inflación: si pierden, adelantar baja el riesgo de que la cuota te pese cada vez más.`);
+  if (PR.ingreso > 0){
+    const next = base.cuotas.find(r=>r.m===paid+1);
+    if (next){ const ratio = next.totalARS/PR.ingreso; h += li(ratio>0.25?'⚠️':'🧾', `Próxima cuota = <b>${pct(ratio*100,1)}</b> de tu ingreso (proyectado con el ingreso cargado)${ratio>0.25?' — por encima del 25%: si tu sueldo no acompaña a la UVA, adelantar baja esa carga':''}.`); }
+  }
+  h += li('🛟', `Adelantá solo excedentes: la plata adelantada no se recupera. Hacelo justo después de pagar una cuota.`);
+  list.innerHTML = h;
+
+  // Curva: rendimiento de adelantar según el momento
+  const last = base.cuotas[base.cuotas.length-1].m;
+  const step = Math.max(1, Math.round((last-paid)/45));
+  const labels = [], dTea = [];
+  for (let k=paid; k<last; k+=step){
+    const sk = stateAt(base,k).saldo;
+    const Xk = Math.min(X, sk*0.9);
+    if (Xk <= 0) break;
+    const a = prepayAnalysis(PR, EV, base, {despuesDe:k, capUVA:Xk, uva:0});
+    labels.push(k); dTea.push(a?.tea!=null ? +(a.tea*100).toFixed(3) : null);
+  }
+  const data = {labels, datasets:[
+    {label:'Adelantar después de la cuota N', data:dTea, borderColor:'#0f766e', pointRadius:0, borderWidth:2, tension:.2},
+    {label:'Tu alternativa', data:labels.map(()=>PR.altReal), borderColor:'#e11d48', borderDash:[5,4], pointRadius:0, borderWidth:1.5},
+    {label:'Tasa del préstamo', data:labels.map(()=>+(teaPrest*100).toFixed(3)), borderColor:'#94a3b8', borderDash:[2,3], pointRadius:0, borderWidth:1}
+  ]};
+  const opts = {responsive:true, maintainAspectRatio:false, animation:false, interaction:{mode:'index',intersect:false},
+    plugins:{legend:{labels:{boxWidth:12,font:{size:11}}}, tooltip:{callbacks:{title:it=>`Después de la cuota ${it[0].label}`, label:it=>`${it.dataset.label}: ${pct(it.raw)}`}}},
+    scales:{x:{ticks:{maxTicksLimit:12,font:{size:10}}}, y:{ticks:{callback:v=>v+'%',font:{size:10}}}}};
+  if (typeof Chart === 'undefined') return;
+  if (chartRec){ chartRec.data=data; chartRec.options=opts; chartRec.update('none'); }
+  else chartRec = new Chart($('chartRec'), {type:'line', data, options:opts});
+}
+
+// ---------- Acciones ----------
+function registrarPago(){
+  const sim = simulate(PR, EV, null);
+  const m = paidCount()+1;
+  const row = sim.cuotas.find(r=>r.m===m);
+  if (!row) return alert('No quedan cuotas por pagar.');
+  const uva = parseFloat($('pg_uva').value);
+  if (!(uva>0)) return alert('Cargá el valor UVA del día de pago (lo publica el BCRA y figura en tu resumen).');
+  let monto = parseFloat($('pg_monto').value);
+  if (!(monto>0)) monto = row.cuotaUVA*uva + (PR.ajSeguro && PR.uva0>0 ? sim.segBase*uva/PR.uva0 : sim.segBase);
+  EV.pagos[m] = {fecha: $('pg_fecha').value || row.fecha, uva, monto};
+  formM = null; render();
+}
+function deshacerPago(){
+  const k = paidCount(); if (!k) return;
+  const adelPost = EV.adelantos.filter(a=>a.despuesDe>=k);
+  if (!confirm(`¿Deshacer el pago de la cuota ${k}?${adelPost.length?` También se eliminarán ${adelPost.length} adelanto(s) posteriores.`:''}`)) return;
+  delete EV.pagos[k];
+  EV.adelantos = EV.adelantos.filter(a=>a.despuesDe<k);
+  formM = null; render();
+}
+function adelantoInput(){
+  const monto = parseFloat($('ad_monto').value);
+  const base = lastSim, paid = paidCount();
+  const uvaIn = parseFloat($('ad_uva').value);
+  const uva = uvaIn>0 ? uvaIn : base.uvaFor(paid).v;
+  return {monto, uva, uvaReal: uvaIn>0, paid, base};
+}
+function simularAdelanto(){
+  const {monto, uva, paid, base} = adelantoInput();
+  if (!(monto>0)) return alert('Cargá el capital a adelantar.');
+  const st = stateAt(base, paid);
+  const an = prepayAnalysis(PR, EV, base, {despuesDe:paid, montoARS:monto, uva});
+  if (!an) return alert('No hay saldo para adelantar.');
+  const I = an.info;
+  const elimTxt = nf2.format(I.elim);
+  const desde = an.lastB ? Math.max(paid+1, Math.ceil(an.lastB.m - I.elim + 1)) : null;
+  const box = $('ad_res');
+  box.classList.remove('hidden');
+  box.innerHTML = `
+    <div class="flex flex-wrap justify-between gap-2 mb-3"><h3 class="font-bold">Impacto del adelanto de ${ars(I.capARS)}</h3>
+    <button class="text-xs text-slate-500" onclick="this.closest('#ad_res').classList.add('hidden')">cerrar ✕</button></div>
+    <div class="grid sm:grid-cols-3 gap-3 text-sm">
+      <div class="p-3 rounded-lg bg-white border"><div class="lbl">Cuotas que cancela</div><div class="text-2xl font-extrabold num">${elimTxt}</div><div class="text-xs text-slate-500">${desde?`de la cuota ${desde} a la ${an.lastB.m}`:''}</div></div>
+      <div class="p-3 rounded-lg bg-white border"><div class="lbl">Nuevo fin</div><div class="text-2xl font-extrabold num">${an.lastE?fdate(an.lastE.fecha):'Cancelado'}</div><div class="text-xs text-slate-500">antes: ${fdate(an.lastB.fecha)} · restan ${an.remE} cuotas (antes ${an.remB})</div></div>
+      <div class="p-3 rounded-lg bg-white border"><div class="lbl">Rendimiento real</div><div class="text-2xl font-extrabold num">${an.tea!=null?pct(an.tea*100):'—'}</div><div class="text-xs text-slate-500">anual, neto de comisión · vs ${pct(PR.altReal)} alternativa</div></div>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-x-6 gap-y-1 mt-3 text-sm num">
+      <div class="flex justify-between"><span class="text-slate-500">Capital en UVAs</span><b>${uv(I.capUVA)}</b></div>
+      <div class="flex justify-between"><span class="text-slate-500">Comisión (${pct(PR.comPct,1)} s/ ${uv(I.sujUVA)} UVAs)</span><b>${ars(I.feeARS)}</b></div>
+      <div class="flex justify-between"><span class="text-slate-500">Total a desembolsar</span><b>${ars(I.capARS+I.feeARS)}</b></div>
+      <div class="flex justify-between"><span class="text-slate-500">Intereses ahorrados</span><b>${uv(an.intSavedUVA)} UVAs ≈ ${ars(an.intSavedUVA*uva)} hoy</b></div>
+      <div class="flex justify-between"><span class="text-slate-500">Ahorro neto nominal proyectado</span><b>${ars(an.nomSaved)}</b></div>
+      <div class="flex justify-between"><span class="text-slate-500">Próxima cuota</span><b>${an.nextE?uv(an.nextE.cuotaUVA):'0'} UVAs (antes ${an.nextB?uv(an.nextB.cuotaUVA):'0'})</b></div>
+      <div class="flex justify-between"><span class="text-slate-500">Saldo después</span><b>${uv(I.saldoUVA)} UVAs</b></div>
+      <div class="flex justify-between"><span class="text-slate-500">Saldo antes</span><b>${uv(st.saldo)} UVAs</b></div>
+    </div>
+    <p class="text-xs text-slate-500 mt-2">El ahorro nominal usa la inflación proyectada; "a valores de hoy" usa la UVA del día del adelanto. Al cancelar capital de las últimas cuotas la cuota mensual baja levemente (menos interés sobre un saldo menor).</p>`;
+  renderRecomendacion(base, paid, st);
+}
+function confirmarAdelanto(){
+  const {monto, uva, uvaReal, paid, base} = adelantoInput();
+  if (!(monto>0)) return alert('Cargá el capital a adelantar.');
+  if (!uvaReal) return alert('Cargá el valor UVA del día del adelanto para registrarlo.');
+  const st = stateAt(base, paid);
+  if (st.saldo<=1e-9) return alert('No hay saldo.');
+  const an = prepayAnalysis(PR, EV, base, {despuesDe:paid, montoARS:monto, uva});
+  if (!confirm(`Registrar adelanto de ${ars(an.info.capARS)} (+ comisión ${ars(an.info.feeARS)}) después de la cuota ${paid}?\nCancela ${nf2.format(an.info.elim)} cuotas.`)) return;
+  EV.adelantos.push({id:Date.now(), despuesDe:paid, fecha:$('ad_fecha').value||today(), montoARS:Math.min(monto, st.saldo*uva), uva});
+  $('ad_monto').value=''; $('ad_res').classList.add('hidden'); $('ad_n_res').innerHTML='';
+  render();
+}
+function borrarAdelanto(id){
+  if (!confirm('¿Eliminar este adelanto? Se recalcula todo el cronograma.')) return;
+  EV.adelantos = EV.adelantos.filter(a=>a.id!==id); render();
+}
+function calcN(){
+  const N = parseInt($('ad_n').value);
+  const {uva, paid, base} = adelantoInput();
+  const rem = base.cuotas.filter(r=>r.m>paid);
+  if (!(N>0)) return;
+  const take = rem.slice(-Math.min(N, rem.length));
+  const cap = take.reduce((s,r)=>s+r.amort,0);
+  const st = stateAt(base, paid);
+  const canc = PR.cuentaOrd ? base.Pn-st.saldo : st.prepaid;
+  const fee = Math.max(0, Math.min(cap, base.umbral-canc))*PR.comPct/100;
+  $('ad_n_res').innerHTML = `Cancelar las últimas <b>${take.length}</b> cuotas requiere <b>${ars(cap*uva)}</b> de capital (${uv(cap)} UVAs) + ${ars(fee*uva)} de comisión. <button class="text-emerald-700 font-semibold underline" onclick="usarMonto(${Math.ceil(cap*uva)})">Usar este monto</button>`;
+}
+function cancelTotal(){
+  const {uva, paid, base} = adelantoInput();
+  const st = stateAt(base, paid);
+  usarMonto(Math.ceil(st.saldo*uva));
+  $('ad_n_res').innerHTML = `Saldo total: <b>${ars(st.saldo*uva)}</b> (${uv(st.saldo)} UVAs) al valor UVA indicado.`;
+}
+function usarMonto(v){ $('ad_monto').value = v; simularAdelanto(); }
+
+function exportar(){
+  const blob = new Blob([JSON.stringify({version:VERSION, exportedAt:new Date().toISOString(), params:PR, ev:EV}, null, 2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `hipoteca-uva-respaldo-${today()}.json`; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+}
+function importar(e){
+  const f = e.target.files[0]; if (!f) return;
+  const rd = new FileReader();
+  rd.onload = () => {
+    try{
+      const d = JSON.parse(rd.result);
+      if (!d.params || !d.ev) throw new Error('formato');
+      PR = {...DEF, ...d.params}; EV = {pagos:d.ev.pagos||{}, adelantos:d.ev.adelantos||[]};
+      writeParams(); formM=null; render(); alert('Respaldo importado.');
+    }catch(err){ alert('El archivo no es un respaldo válido.'); }
+    e.target.value='';
+  };
+  rd.readAsText(f);
+}
+function reiniciar(){
+  if (!confirm('Se borran todos los pagos, adelantos y condiciones guardadas. ¿Seguro? (Exportá un respaldo antes)')) return;
+  PR = {...DEF}; EV = {pagos:{}, adelantos:[]};
+  try{ localStorage.removeItem(KEY); }catch(e){}
+  writeParams(); formM=null; render();
+}
+
+// ---------- Pestañas ----------
+function goTab(t){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on', b.dataset.tab===t));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id==='tab-'+t));
+  try{ localStorage.setItem('hipTab', t); }catch(e){}
+  setTimeout(()=>{ chartCuota?.resize(); chartRec?.resize(); }, 30);
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click', ()=>goTab(b.dataset.tab)));
+if (window.Chart){ Chart.defaults.font.family = 'Manrope, system-ui, sans-serif'; Chart.defaults.color = '#7a8499'; Chart.defaults.borderColor = '#efebe3'; }
+let t0 = 'resumen'; try{ t0 = localStorage.getItem('hipTab') || 'resumen'; }catch(e){}
+goTab(document.getElementById('tab-'+t0) ? t0 : 'resumen');
+
+// ---------- Init ----------
+load();
+writeParams();
+if (!storageOK) $('storageWarn').classList.remove('hidden');
+FIELDS.forEach(f=>{ const el=$('p_'+f); el.addEventListener(el.type==='checkbox'||el.type==='date'?'change':'input', render); });
+$('pg_uva').addEventListener('input', ()=>{
+  const u = parseFloat($('pg_uva').value); const m = paidCount()+1;
+  const row = lastSim?.cuotas.find(r=>r.m===m);
+  if (row && u>0){ const seg = PR.ajSeguro && PR.uva0>0 ? lastSim.segBase*u/PR.uva0 : lastSim.segBase; $('pg_monto').value = Math.round(row.cuotaUVA*u + seg); }
+});
+let recT=null;
+['ad_monto','ad_uva'].forEach(id=>$(id).addEventListener('input', ()=>{ clearTimeout(recT); recT=setTimeout(()=>{ const b=lastSim,p=paidCount(); renderRecomendacion(b,p,stateAt(b,p)); }, 300); }));
+render();
+</script>
+</body>
+</html>
