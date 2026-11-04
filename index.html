@@ -519,11 +519,11 @@ document.querySelectorAll('input[data-num]').forEach(el=>{
 
 // ---------- Estado y persistencia ----------
 const KEY = 'simuladorHipotecaUVA_v1';
-const VERSION = 2;
-// Valores por defecto = cuadro de marcha del banco (22/10/2026)
-const DEF = {valorUSD:287058, modoMonto:'ars', montoARS:298000000, pct:66.55, tna:6.9, anios:20, tc:1560, uva0:2163.03, inf:2, fecha1:'2026-12-01',
+const VERSION = 3;
+// Valores por defecto = cuadro de marcha del banco (04/11/2026)
+const DEF = {valorUSD:287058, modoMonto:'ars', montoARS:295000000, pct:65.88, tna:6.9, anios:20, tc:1560, uva0:2182.82, inf:2, fecha1:'2026-12-01',
   iva:false, m2:135, valorM2:2588000, tasaSeg:0.00605, ajSeguro:false,
-  comPct:3, umbralPct:25, cuentaOrd:true, modoAdel:'plazo', altReal:3, ingreso:9300000};
+  comPct:3, umbralPct:25, cuentaOrd:true, modoAdel:'plazo', altReal:3, ingreso:9167489};
 const FIELDS = Object.keys(DEF);
 let PR = {...DEF};
 let EV = {pagos:{}, adelantos:[]};
@@ -550,7 +550,12 @@ function load(){
       EV = {pagos:d.ev?.pagos||{}, adelantos:d.ev?.adelantos||[]};
       const vacio = !Object.keys(EV.pagos).length && !EV.adelantos.length;
       // Versión anterior sin pagos cargados: tomar las condiciones reales del banco
-      PR = ((d.version||1) < VERSION && vacio) ? {...DEF} : {...DEF, ...(d.params||{})};
+      PR = ((d.version||1) < 2 && vacio) ? {...DEF} : {...DEF, ...(d.params||{})};
+      // v3: nuevo cuadro del banco (04/11/2026). Actualiza solo los datos que seguían con el valor del cuadro anterior.
+      if ((d.version||1) < 3){
+        [['montoARS',298000000,295000000],['uva0',2163.03,2182.82],['ingreso',9300000,9167489]]
+          .forEach(([f,viejo,nuevo])=>{ if (PR[f]===viejo) PR[f]=nuevo; });
+      }
     }
   }catch(e){ storageOK = false; }
 }
