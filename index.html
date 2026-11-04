@@ -178,8 +178,8 @@
         <p id="pg_titulo" class="card-sub mt-2 mb-5"></p>
         <div class="grid grid-cols-2 gap-4">
           <div><label class="lbl">Fecha de pago</label><input id="pg_fecha" type="date" class="inp"></div>
-          <div><label class="lbl">Valor UVA del día</label><input id="pg_uva" type="number" step="any" class="inp"></div>
-          <div class="col-span-2"><label class="lbl">Monto pagado</label><div class="unit"><input id="pg_monto" type="number" step="any" class="inp"><span>ARS</span></div>
+          <div><label class="lbl">Valor UVA del día</label><input id="pg_uva" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"></div>
+          <div class="col-span-2"><label class="lbl">Monto pagado</label><div class="unit"><input id="pg_monto" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>ARS</span></div>
             <p class="hint">Se completa solo al cargar la UVA (cuota + seguro). Corregilo si el resumen del banco dice otro importe.</p></div>
         </div>
         <div class="flex gap-2 mt-6">
@@ -192,8 +192,8 @@
         <div class="flex items-center"><span class="step">2</span><span class="card-h">Quiero adelantar capital</span></div>
         <p class="card-sub mt-2 mb-5">Se aplica después de la última cuota pagada y cancela desde la <b>última cuota hacia adelante</b>.</p>
         <div class="grid grid-cols-2 gap-4">
-          <div class="col-span-2"><label class="lbl">Capital a adelantar</label><div class="unit"><input id="ad_monto" type="number" step="any" class="inp"><span>ARS</span></div></div>
-          <div><label class="lbl">Valor UVA del día</label><input id="ad_uva" type="number" step="any" class="inp"></div>
+          <div class="col-span-2"><label class="lbl">Capital a adelantar</label><div class="unit"><input id="ad_monto" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>ARS</span></div></div>
+          <div><label class="lbl">Valor UVA del día</label><input id="ad_uva" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"></div>
           <div><label class="lbl">Fecha</label><input id="ad_fecha" type="date" class="inp"></div>
         </div>
         <div class="flex gap-2 mt-6">
@@ -203,7 +203,7 @@
         <div class="mt-5 pt-5 border-t border-dashed" style="border-color:var(--line)">
           <label class="lbl">Atajo: ¿cuánto necesito para cancelar N cuotas?</label>
           <div class="flex gap-2">
-            <input id="ad_n" type="number" step="1" min="1" class="inp" placeholder="Ej. 12">
+            <input id="ad_n" type="text" inputmode="decimal" autocomplete="off" data-num class="inp" placeholder="Ej. 12">
             <button class="btn btn-sec" onclick="calcN()">Calcular</button>
             <button class="btn btn-sec" onclick="cancelTotal()">Saldo total</button>
           </div>
@@ -268,16 +268,16 @@
         <div class="grid sm:grid-cols-2 gap-4">
           <div class="sm:col-span-2"><label class="lbl">Monto del préstamo definido por</label>
             <select id="p_modoMonto" class="inp"><option value="ars">Monto exacto en pesos (como figura en el banco)</option><option value="pct">% del valor de la propiedad</option></select></div>
-          <div id="w_montoARS"><label class="lbl">Monto del préstamo</label><div class="unit"><input id="p_montoARS" type="number" step="any" class="inp"><span>ARS</span></div></div>
-          <div id="w_pct"><label class="lbl">% a financiar</label><div class="unit"><input id="p_pct" type="number" step="any" class="inp"><span>%</span></div></div>
-          <div><label class="lbl">Valor de la propiedad</label><div class="unit"><input id="p_valorUSD" type="number" step="any" class="inp"><span>USD</span></div></div>
-          <div><label class="lbl">Tipo de cambio</label><div class="unit"><input id="p_tc" type="number" step="any" class="inp"><span>$/USD</span></div></div>
-          <div><label class="lbl">TNA del banco (sobre UVA)</label><div class="unit"><input id="p_tna" type="number" step="any" class="inp"><span>%</span></div></div>
-          <div><label class="lbl">Plazo</label><div class="unit"><input id="p_anios" type="number" step="1" class="inp"><span>años</span></div></div>
-          <div><label class="lbl">Valor UVA al otorgamiento</label><div class="unit"><input id="p_uva0" type="number" step="any" class="inp"><span>$</span></div><p class="hint">El de la fecha de escritura/desembolso.</p></div>
+          <div id="w_montoARS"><label class="lbl">Monto del préstamo</label><div class="unit"><input id="p_montoARS" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>ARS</span></div></div>
+          <div id="w_pct"><label class="lbl">% a financiar</label><div class="unit"><input id="p_pct" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>%</span></div></div>
+          <div><label class="lbl">Valor de la propiedad</label><div class="unit"><input id="p_valorUSD" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>USD</span></div></div>
+          <div><label class="lbl">Tipo de cambio</label><div class="unit"><input id="p_tc" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>$/USD</span></div></div>
+          <div><label class="lbl">TNA del banco (sobre UVA)</label><div class="unit"><input id="p_tna" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>%</span></div></div>
+          <div><label class="lbl">Plazo</label><div class="unit"><input id="p_anios" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>años</span></div></div>
+          <div><label class="lbl">Valor UVA al otorgamiento</label><div class="unit"><input id="p_uva0" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>$</span></div><p class="hint">El de la fecha de escritura/desembolso.</p></div>
           <div><label class="lbl">Vencimiento de la 1ª cuota</label><input id="p_fecha1" type="date" class="inp"></div>
-          <div><label class="lbl">Inflación mensual proyectada</label><div class="unit"><input id="p_inf" type="number" step="any" class="inp"><span>%</span></div><p class="hint">Solo afecta la proyección en pesos.</p></div>
-          <div><label class="lbl">Ingreso neto mensual</label><div class="unit"><input id="p_ingreso" type="number" step="any" class="inp"><span>ARS</span></div></div>
+          <div><label class="lbl">Inflación mensual proyectada</label><div class="unit"><input id="p_inf" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>%</span></div><p class="hint">Solo afecta la proyección en pesos.</p></div>
+          <div><label class="lbl">Ingreso neto mensual</label><div class="unit"><input id="p_ingreso" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>ARS</span></div></div>
           <label class="chk sm:col-span-2"><input id="p_iva" type="checkbox"><span><b>Segunda vivienda:</b> suma 21% de IVA sobre los intereses.</span></label>
         </div>
       </div>
@@ -286,9 +286,9 @@
         <div class="card p-6">
           <div class="card-h mb-5">Seguro de incendio</div>
           <div class="grid grid-cols-2 gap-4">
-            <div><label class="lbl">Superficie</label><div class="unit"><input id="p_m2" type="number" step="any" class="inp"><span>m²</span></div></div>
-            <div><label class="lbl">Tasa mensual</label><div class="unit"><input id="p_tasaSeg" type="number" step="any" class="inp"><span>%</span></div></div>
-            <div class="col-span-2"><label class="lbl">Valor de reposición por m²</label><div class="unit"><input id="p_valorM2" type="number" step="any" class="inp"><span>ARS</span></div></div>
+            <div><label class="lbl">Superficie</label><div class="unit"><input id="p_m2" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>m²</span></div></div>
+            <div><label class="lbl">Tasa mensual</label><div class="unit"><input id="p_tasaSeg" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>%</span></div></div>
+            <div class="col-span-2"><label class="lbl">Valor de reposición por m²</label><div class="unit"><input id="p_valorM2" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>ARS</span></div></div>
           </div>
           <div class="flex justify-between items-center mt-4 p-3 rounded-xl" style="background:var(--accent-soft)">
             <span class="text-sm font-semibold" style="color:var(--accent)">Prima mensual</span><b id="d_seguro" class="num" style="color:var(--accent)"></b>
@@ -299,9 +299,9 @@
         <div class="card p-6">
           <div class="card-h mb-5">Adelantos</div>
           <div class="grid grid-cols-2 gap-4">
-            <div><label class="lbl">Comisión</label><div class="unit"><input id="p_comPct" type="number" step="any" class="inp"><span>%</span></div></div>
-            <div><label class="lbl">Sin comisión desde</label><div class="unit"><input id="p_umbralPct" type="number" step="any" class="inp"><span>%</span></div></div>
-            <div class="col-span-2"><label class="lbl">Rendimiento real de tu alternativa</label><div class="unit"><input id="p_altReal" type="number" step="any" class="inp"><span>% anual</span></div><p class="hint">Lo que le ganarías a la inflación invirtiendo esa plata (bonos CER, plazo fijo UVA…).</p></div>
+            <div><label class="lbl">Comisión</label><div class="unit"><input id="p_comPct" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>%</span></div></div>
+            <div><label class="lbl">Sin comisión desde</label><div class="unit"><input id="p_umbralPct" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>%</span></div></div>
+            <div class="col-span-2"><label class="lbl">Rendimiento real de tu alternativa</label><div class="unit"><input id="p_altReal" type="text" inputmode="decimal" autocomplete="off" data-num class="inp"><span>% anual</span></div><p class="hint">Lo que le ganarías a la inflación invirtiendo esa plata (bonos CER, plazo fijo UVA…).</p></div>
           </div>
           <div class="mt-4"><label class="lbl">Cómo aplica el banco el adelanto</label>
             <select id="p_modoAdel" class="inp"><option value="plazo">Reducir plazo: mantiene la cuota y elimina cuotas del final</option><option value="cuota">Reducir cuota: mantiene el plazo y baja la cuota</option></select></div>
@@ -472,6 +472,51 @@ function prepayAnalysis(p, ev, base, extra){
 }
 // ================= ENGINE END =================
 
+
+// ---------- Números en formato argentino (1.000.000,25) ----------
+function parseAR(str){
+  let t = String(str ?? '').trim().replace(/\s|\$/g,'');
+  if (!t) return NaN;
+  if (t.includes(',')) return parseFloat(t.replace(/\./g,'').replace(',', '.'));
+  // Sin coma: un único punto que no agrupa miles (ej. "6.9" o "2163.03") se toma como decimal
+  const dots = (t.match(/\./g)||[]).length;
+  if (dots === 1 && !/^-?\d{1,3}\.\d{3}$/.test(t)) return parseFloat(t);
+  return parseFloat(t.replace(/\./g,''));
+}
+function fmtAR(v, maxDec=6){
+  const x = typeof v === 'number' ? v : parseAR(v);
+  if (!isFinite(x)) return '';
+  return new Intl.NumberFormat('es-AR',{maximumFractionDigits:maxDec}).format(x);
+}
+function numVal(id){ return parseAR($(id).value); }
+// Formatea mientras escribís: agrega los puntos de miles y respeta la coma decimal
+function liveFormat(e){
+  const el = e.target;
+  if (e.inputType === 'insertFromPaste' || e.inputType === 'insertFromDrop'){
+    const v = parseAR(el.value); el.value = isFinite(v) ? fmtAR(v) : ''; return;
+  }
+  let v = el.value, caret = el.selectionStart ?? v.length;
+  // La tecla "." del teclado numérico se toma como coma decimal
+  if (e.data === '.' && caret > 0 && v[caret-1] === '.') v = v.slice(0, caret-1) + ',' + v.slice(caret);
+  const sig = v.slice(0, caret).replace(/[^\d,\-]/g,'').length;
+  let clean = v.replace(/[^\d,\-]/g,'');
+  const neg = clean.startsWith('-'); clean = clean.replace(/-/g,'');
+  const ci = clean.indexOf(',');
+  let ent = ci >= 0 ? clean.slice(0, ci) : clean;
+  const dec = ci >= 0 ? clean.slice(ci+1).replace(/,/g,'') : null;
+  ent = ent.replace(/^0+(?=\d)/, '');
+  if (ent === '' && dec !== null) ent = '0';
+  const out = (neg?'-':'') + ent.replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (dec !== null ? ',' + dec : '');
+  el.value = out;
+  let cnt = 0, pos = 0;
+  while (pos < out.length && cnt < sig + (ent==='0' && v.replace(/[^\d,]/g,'').startsWith(',') ? 1 : 0)){ if (/[\d,\-]/.test(out[pos])) cnt++; pos++; }
+  try{ el.setSelectionRange(pos, pos); }catch(_){}
+}
+document.querySelectorAll('input[data-num]').forEach(el=>{
+  el.addEventListener('input', liveFormat);
+  el.addEventListener('blur', ()=>{ const v = parseAR(el.value); if (isFinite(v)) el.value = fmtAR(v); });
+});
+
 // ---------- Estado y persistencia ----------
 const KEY = 'simuladorHipotecaUVA_v1';
 const VERSION = 2;
@@ -516,11 +561,11 @@ function save(){
   }catch(e){ storageOK = false; $('storageWarn').classList.remove('hidden'); }
 }
 function writeParams(){
-  FIELDS.forEach(f=>{ const el=$('p_'+f); if(!el) return; if(el.type==='checkbox') el.checked=!!PR[f]; else el.value = PR[f] ?? ''; });
+  FIELDS.forEach(f=>{ const el=$('p_'+f); if(!el) return; if(el.type==='checkbox') el.checked=!!PR[f]; else el.value = (el.dataset.num!==undefined) ? fmtAR(PR[f]) : (PR[f] ?? ''); });
 }
 function readParams(){
   const p = {};
-  FIELDS.forEach(f=>{ const el=$('p_'+f); if(el.type==='checkbox') p[f]=el.checked; else if(el.tagName==='SELECT') p[f]=el.value; else if(el.type==='date') p[f]=el.value||DEF[f]; else { const v=parseFloat(el.value); p[f]=isFinite(v)?v:0; } });
+  FIELDS.forEach(f=>{ const el=$('p_'+f); if(el.type==='checkbox') p[f]=el.checked; else if(el.tagName==='SELECT') p[f]=el.value; else if(el.type==='date') p[f]=el.value||DEF[f]; else { const v=parseAR(el.value); p[f]=isFinite(v)?v:0; } });
   return p;
 }
 function paidCount(){ let k=0; while (EV.pagos[k+1]) k++; return k; }
@@ -664,8 +709,8 @@ function renderChartCuota(){
   const noAdel = simulate(PR, {pagos:EV.pagos, adelantos:[]}, null);
   const hayAdel = EV.adelantos.length > 0;
   // Adelanto que estás simulando en "Registrar pagos"
-  const adM = parseFloat($('ad_monto').value);
-  const adUin = parseFloat($('ad_uva').value);
+  const adM = numVal('ad_monto');
+  const adUin = numVal('ad_uva');
   const uvaPos = base.uvaFor(paid).v;
   const sim = adM > 0 ? simulate(PR, EV, {despuesDe:paid, montoARS:adM, uva: adUin>0?adUin:uvaPos}) : null;
   const hoy = uvaPos;
@@ -781,8 +826,8 @@ function renderRecomendacion(base, paid, st){
   const alt = PR.altReal/100;
   const altM = Math.pow(1+alt,1/12)-1;
   const uvaPos = base.uvaFor(paid).v;
-  const adM = parseFloat($('ad_monto').value);
-  const adU = parseFloat($('ad_uva').value) > 0 ? parseFloat($('ad_uva').value) : uvaPos;
+  const adM = numVal('ad_monto');
+  const adU = numVal('ad_uva') > 0 ? numVal('ad_uva') : uvaPos;
   let X = adM > 0 ? adM/adU : base.Pn*0.05;
   X = Math.min(X, st.saldo);
 
@@ -871,9 +916,9 @@ function registrarPago(){
   const m = paidCount()+1;
   const row = sim.cuotas.find(r=>r.m===m);
   if (!row) return alert('No quedan cuotas por pagar.');
-  const uva = parseFloat($('pg_uva').value);
+  const uva = numVal('pg_uva');
   if (!(uva>0)) return alert('Cargá el valor UVA del día de pago (lo publica el BCRA y figura en tu resumen).');
-  let monto = parseFloat($('pg_monto').value);
+  let monto = numVal('pg_monto');
   if (!(monto>0)) monto = row.cuotaUVA*uva + (PR.ajSeguro && PR.uva0>0 ? sim.segBase*uva/PR.uva0 : sim.segBase);
   EV.pagos[m] = {fecha: $('pg_fecha').value || row.fecha, uva, monto};
   formM = null; render();
@@ -887,9 +932,9 @@ function deshacerPago(){
   formM = null; render();
 }
 function adelantoInput(){
-  const monto = parseFloat($('ad_monto').value);
+  const monto = numVal('ad_monto');
   const base = lastSim, paid = paidCount();
-  const uvaIn = parseFloat($('ad_uva').value);
+  const uvaIn = numVal('ad_uva');
   const uva = uvaIn>0 ? uvaIn : base.uvaFor(paid).v;
   return {monto, uva, uvaReal: uvaIn>0, paid, base};
 }
@@ -952,7 +997,7 @@ function borrarAdelanto(id){
   EV.adelantos = EV.adelantos.filter(a=>a.id!==id); render();
 }
 function calcN(){
-  const N = parseInt($('ad_n').value);
+  const N = Math.round(numVal('ad_n'));
   const {uva, paid, base} = adelantoInput();
   if (!(N>0)) return;
   const st = stateAt(base, paid);
@@ -973,7 +1018,7 @@ function cancelTotal(){
   usarMonto(Math.ceil(st.saldo*uva));
   $('ad_n_res').innerHTML = `Saldo total: <b>${ars(st.saldo*uva)}</b> (${uv(st.saldo)} UVAs) al valor UVA indicado.`;
 }
-function usarMonto(v){ $('ad_monto').value = v; simularAdelanto(); }
+function usarMonto(v){ $('ad_monto').value = fmtAR(v); simularAdelanto(); }
 
 function exportar(){
   const blob = new Blob([JSON.stringify({version:VERSION, exportedAt:new Date().toISOString(), params:PR, ev:EV}, null, 2)], {type:'application/json'});
@@ -1020,9 +1065,9 @@ writeParams();
 if (!storageOK) $('storageWarn').classList.remove('hidden');
 FIELDS.forEach(f=>{ const el=$('p_'+f); el.addEventListener(el.type==='checkbox'||el.type==='date'?'change':'input', render); });
 $('pg_uva').addEventListener('input', ()=>{
-  const u = parseFloat($('pg_uva').value); const m = paidCount()+1;
+  const u = numVal('pg_uva'); const m = paidCount()+1;
   const row = lastSim?.cuotas.find(r=>r.m===m);
-  if (row && u>0){ const seg = PR.ajSeguro && PR.uva0>0 ? lastSim.segBase*u/PR.uva0 : lastSim.segBase; $('pg_monto').value = Math.round(row.cuotaUVA*u + seg); }
+  if (row && u>0){ const seg = PR.ajSeguro && PR.uva0>0 ? lastSim.segBase*u/PR.uva0 : lastSim.segBase; $('pg_monto').value = fmtAR(Math.round((row.cuotaUVA*u + seg)*100)/100); }
 });
 let recT=null;
 ['ad_monto','ad_uva'].forEach(id=>$(id).addEventListener('input', ()=>{ clearTimeout(recT); recT=setTimeout(()=>{ const b=lastSim,p=paidCount(); renderRecomendacion(b,p,stateAt(b,p)); renderChartCuota(); }, 300); }));
